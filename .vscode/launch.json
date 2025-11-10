@@ -1,0 +1,45 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "BuscaBinariaCasos",
+      "request": "launch",
+      "mainClass": "codigo.java.BuscaBinariaCasos",
+      "projectName": "grupo12-busca-binaria_bca97951"
+    },
+    {
+      "type": "java",
+      "name": "BuscaBinaria",
+      "request": "launch",
+      "mainClass": "codigo.java.BuscaBinaria",
+      "projectName": "grupo12-busca-binaria_bca97951"
+    },
+    {
+      "type": "java",
+      "name": "GenerateData",
+      "request": "launch",
+      "mainClass": "GenerateData",
+      "projectName": "grupo12-busca-binaria_bca97951"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/ramon/IdeaProjects/grupo12-busca-binaria/codigo/c",
+      "program": "c:/Users/ramon/IdeaProjects/grupo12-busca-binaria/codigo/c/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
