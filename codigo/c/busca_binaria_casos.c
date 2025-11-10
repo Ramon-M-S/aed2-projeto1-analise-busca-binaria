@@ -92,8 +92,8 @@ int main()
     int tamanhos[] = {10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000};
     int num_tamanhos = sizeof(tamanhos) / sizeof(tamanhos[0]);
 
-    const char *arquivo_estatisticas = "..\\..\\resultados\\estatisticas\\resultados_C.csv";
-    const char *arquivo_brutos = "..\\..\\resultados\\brutos\\resultados_C_run.csv";
+    const char *arquivo_estatisticas = "..\\..\\resultados\\estatisticas\\resultados_casos_especificos_C.csv";
+    const char *arquivo_brutos = "..\\..\\resultados\\brutos\\resultados_casos_especificos_C.csv";
 
     system("mkdir ..\\..\\resultados 2>nul");
     system("mkdir ..\\..\\resultados\\estatisticas 2>nul");

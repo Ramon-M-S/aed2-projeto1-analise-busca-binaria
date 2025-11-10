@@ -56,8 +56,8 @@ def main():
     os.makedirs("resultados/estatisticas", exist_ok=True)
     os.makedirs("resultados/brutos", exist_ok=True)
 
-    arquivo_est = "resultados/estatisticas/resultados_casos_python.csv"
-    arquivo_brutos = "resultados/brutos/resultados_python_run.csv"
+    arquivo_est = "resultados/estatisticas/resultados_casos_especificos_python.csv"
+    arquivo_brutos = "resultados/brutos/resultados_especificos_python_run.csv"
 
     with open(arquivo_est, "w", newline='') as f_est, \
          open(arquivo_brutos, "w", newline='') as f_brutos:

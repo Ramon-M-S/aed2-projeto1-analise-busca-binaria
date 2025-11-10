@@ -92,8 +92,8 @@ public class BuscaBinaria {
             return;
         }
 
-        File arquivoEst = dirEstatisticas.resolve("resultados_java.csv").toFile();
-        File arquivoBrutos = dirBrutos.resolve("resultados_java_run.csv").toFile();
+        File arquivoEst = dirEstatisticas.resolve("resultados_casos_aleatorio_java.csv").toFile();
+        File arquivoBrutos = dirBrutos.resolve("resultados_casos_aleatorio_java.csv").toFile();
 
         try (PrintWriter saidaEst = new PrintWriter(new FileWriter(arquivoEst));
             PrintWriter saidaBrutos = new PrintWriter(new FileWriter(arquivoBrutos))) {

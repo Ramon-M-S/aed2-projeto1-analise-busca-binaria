@@ -44,8 +44,8 @@ def main():
     os.makedirs("resultados/estatisticas", exist_ok=True)
     os.makedirs("resultados/brutos", exist_ok=True)
 
-    caminho_est = "resultados/estatisticas/resultados_python.csv"
-    caminho_bruto = "resultados/brutos/resultados_python_run.csv"
+    caminho_est = "resultados/estatisticas/resultados_casos_aleatorio_python.csv"
+    caminho_bruto = "resultados/brutos/resultados_casos_aleatorio_python_run.csv"
 
     with open(caminho_est, "w", newline="") as f_est, \
          open(caminho_bruto, "w", newline="") as f_bruto:

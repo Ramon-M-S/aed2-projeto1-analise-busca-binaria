@@ -73,20 +73,24 @@ public class BuscaBinariaCasos {
         // Diretórios e arquivos
         Path dirResultados = Paths.get("resultados");
         Path dirEstatisticas = dirResultados.resolve("estatisticas");
+        Path dirBrutos = dirResultados.resolve("brutos");
 
         try {
             Files.createDirectories(dirEstatisticas);
+            Files.createDirectories(dirBrutos);
         } catch (IOException e) {
             System.out.println("Erro ao criar diretórios");
             return;
         }
 
-        File arquivoEst = dirEstatisticas.resolve("resultados_casos_java.csv").toFile();
+        File arquivoEst = dirEstatisticas.resolve("resultados_casos_especificos_java.csv").toFile();
+        File arquivoBrutos = dirBrutos.resolve("resultados_casos_especificos_java.csv").toFile();
 
-        try (PrintWriter saidaEst = new PrintWriter(new FileWriter(arquivoEst))) {
+        try (PrintWriter saidaEst = new PrintWriter(new FileWriter(arquivoEst));
+            PrintWriter saidaBrutos = new PrintWriter(new FileWriter(arquivoBrutos))) {
 
             saidaEst.println("n,caso,media_ns,desvio_ns");
-            //saidaBrutos.println("n,caso,run,tempo_ns");
+            saidaBrutos.println("n,caso,run,tempo_ns");
 
             for (int n : tamanhos) {
 
@@ -110,6 +114,7 @@ public class BuscaBinariaCasos {
                         double tempo = medirTempoExecucaoNs(vetor, chave);
                         tempos[run - 1] = tempo;
 
+                        saidaBrutos.printf("%d,%s,%d,%.2f%n", n, casos[tipo], run, tempo);
                     }
 
                     double media = calcularMedia(tempos);

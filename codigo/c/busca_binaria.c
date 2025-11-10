@@ -103,8 +103,8 @@ int main()
     int num_tamanhos = sizeof(tamanhos) / sizeof(tamanhos[0]);
 
     // Arquivos de saída
-    const char *arquivo_estatisticas = "..\\..\\resultados\\estatisticas\\resultados_casos_C.csv";
-    const char *arquivo_brutos = "..\\..\\resultados\\brutos\\resultados_casos_C_run.csv";
+    const char *arquivo_estatisticas = "..\\..\\resultados\\estatisticas\\resultados_casos_aleatorios_C.csv";
+    const char *arquivo_brutos = "..\\resultados\\brutos\\resultados_casos_aleatorios_C.csv";
 
     // Cria os diretórios, se não existirem
     system("mkdir ..\\..\\resultados 2>nul");
