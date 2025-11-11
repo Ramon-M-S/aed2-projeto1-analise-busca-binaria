@@ -66,7 +66,7 @@ def main():
                     continue
 
                 # Chave aleatória: metade das vezes existe, metade não
-                if random.random() < 0.5:
+                if random.random() < 0.7:
                     chave = random.choice(vetor)
                 else:
                     chave = vetor[-1] + random.randint(1, 1000)

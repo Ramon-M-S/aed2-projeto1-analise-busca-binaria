@@ -52,12 +52,30 @@ int *ler_vetor(const char *caminho, int n)
 }
 
 // -------- Geração da chave --------
+/*int gerar_chave(int max_valor)
+{
+    int probabilidade = rand() % 100; // 0 a 99
+
+    if (probabilidade < 70)
+    {
+        // 70% - chave presente no vetor
+        return rand() % (max_valor + 1);
+    }
+    else
+    {
+        // 30% - chave ausente do vetor
+        return max_valor + 1 + (rand() % 1000);
+    }
+}*/
+
+// -------- Geração da chave --------
 int gerar_chave(int max_valor)
 {
-    if (rand() % 2 == 0)
-        return rand() % (max_valor + 1); // valor possivelmente presente
-    else
-        return max_valor + (rand() % 1000); // valor inexistente
+    // 70% de chance de gerar chave presente, 30% de chance de gerar chave ausente
+    if (rand() % 100 < 70)                      // 70% presentes
+        return rand() % (max_valor + 1);        // valor possivelmente presente
+    else                                        // 30% ausentes
+        return max_valor + 1 + (rand() % 1000); // valor inexistente
 }
 
 // -------- Medição do tempo em nanossegundos --------
@@ -104,7 +122,7 @@ int main()
 
     // Arquivos de saída
     const char *arquivo_estatisticas = "..\\..\\resultados\\estatisticas\\resultados_casos_aleatorios_C.csv";
-    const char *arquivo_brutos = "..\\resultados\\brutos\\resultados_casos_aleatorios_C.csv";
+    const char *arquivo_brutos = "..\\..\\resultados\\brutos\\resultados_casos_aleatorios_C.csv";
 
     // Cria os diretórios, se não existirem
     system("mkdir ..\\..\\resultados 2>nul");

@@ -43,11 +43,11 @@ public class BuscaBinaria {
     // -------- Geração da chave --------
     public static int gerarChave(int maxValor) {
         Random rand = new Random();
-        if (rand.nextBoolean())
-            return rand.nextInt(maxValor + 1); // valor possivelmente presente
-        else
-            return maxValor + rand.nextInt(1000); // valor inexistente
-    }
+        if (rand.nextInt(100) < 70)  // 70% presentes
+            return rand.nextInt(maxValor + 1);
+        else  // 30% ausentes
+            return maxValor + 1 + rand.nextInt(1000);
+}
 
     // -------- Medição do tempo em nanossegundos --------
     public static double medirTempoExecucaoNs(int[] vetor, int chave) {
